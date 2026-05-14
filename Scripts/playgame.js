@@ -61,6 +61,17 @@ function playGame(playerMove){
     }
     saveGameToLocalStorage(score);
 
+    document.querySelector('.js-results').innerHTML = results;
+    document.querySelector('.js-choices').innerHTML = `
+      YOU:${playerMove}   ||   OPPS:${computerMove}
+    `
+    document.querySelector('.js-scores').innerHTML = `
+      WINS:${score.wins} || LOSES:${score.loses} || TIES:${score.ties}
+    `
+    document.querySelector('.js-total-plays').innerHTML = `
+      TOTAL FADES: ${score.wins + score.ties + score.loses}
+    `
+
 };
 
 document.querySelectorAll('.js-button').forEach((button)=>{
@@ -74,6 +85,13 @@ function resetScore(){
   score.wins = 0;
   score.loses = 0;
   score.ties = 0;
+
+  document.querySelector('.js-scores').innerHTML = `
+    WINS:${score.wins} || LOSES:${score.loses} || TIES:${score.ties}`
+
+  document.querySelector('.js-total-plays').innerHTML = `
+    TOTAL FADES: ${score.wins + score.ties + score.loses}
+  `
 }
 document.querySelector('.js-reset-button').addEventListener('click', ()=>{
   resetScore();
@@ -100,3 +118,5 @@ function autoPlay(){
 document.querySelector('.js-autoplay-button').addEventListener('click', ()=>{
   autoPlay();
 });
+
+

@@ -7,7 +7,7 @@
 body{
   height:100dvh;
   font-family:monospace;
-  font-size:2rem;
+  font-size:1.5rem;
   background-color:whitesmoke;
   color:black;
   display:flex;
@@ -20,5 +20,9 @@ body{
 button{
   padding:.5rem;
   font-size:1.5rem;
-
+  border:none;
+}
+.results {
+  font-family:monospace;
+  font-size: 1.5rem;
 }
