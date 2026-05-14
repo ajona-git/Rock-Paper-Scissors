@@ -13,16 +13,15 @@ let intervalId;
 function pickComputerMove(){
   let computerMove = '';
 const randomNumber= Math.random()
-  if(randomNumber > 0 && randomNumber <= 1/3){
+  if(randomNumber < 1/3){
     computerMove = 'ROCK'
-  }else if(randomNumber > 1/3 && randomNumber <= 2/3){
+  }else if(randomNumber >= 1/3 && randomNumber < 2/3){
     computerMove = 'PAPER'
-  }else if (randomNumber > 2/3 && randomNumber <= 1){
+  }else if (randomNumber >= 2/3 && randomNumber <1){
     computerMove = 'SCISSORS'
   }
   
   return computerMove;
-  
 };
 function playGame(playerMove){
   const computerMove = pickComputerMove();
