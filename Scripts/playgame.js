@@ -71,6 +71,9 @@ function playGame(playerMove){
       TOTAL FADES: ${score.wins + score.ties + score.loses}
     `
 
+    document.querySelector('.reset-Autoplay').classList.add('show-button');
+    
+
 };
 
 document.querySelectorAll('.js-button').forEach((button)=>{
