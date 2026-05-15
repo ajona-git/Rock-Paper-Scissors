@@ -1,29 +1,6 @@
 import { saveGameToLocalStorage } from "./utility/saveToStorage.js";
 import { removeGameFromLocalStorage } from "./utility/removeFromStorage.js";
 
-
-document.querySelector('.js-fade').addEventListener('click', ()=>{
-  let fade = `
-    <section class="game-section">
-    <button class="rock-play-button js-button" data-move="ROCK">ROCK</button>
-    <button class="paper-play-button js-button" data-move="PAPER">PAPER</button>
-    <button class="scissors-play-button js-button" data-move="SCISSORS">SCISSORS</button>
-  </section>
-  <section class="result-section">
-    <p class="results js-results"></p>
-    <p class="results-choices js-choices"></p>
-    <p class="scores js-scores"></p>
-  </section>
-  <section class="reset-Autoplay">
-    <button class="reset-button js-reset-button" >RESET</button>
-    <button class="autoplay-button js-autoplay-button">AUTO PLAY</button>
-  </section>
-  <section class="total">
-    <p class="total-plays js-total-plays"></p>
-  </section>
-  `
-  document.querySelector('.js-fade').innerHTML = fade;
-});
 let results = '';
 let score = JSON.parse(localStorage.getItem('score')) || {
   wins: 0,
