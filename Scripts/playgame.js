@@ -50,7 +50,7 @@ function playGame(playerMove){
       results = 'TIE GAME';
     };
   };
-  console.log(results)
+  
     if(results === 'YOU WIN'){
       score.wins++;
     }else if(results === 'YOU LOSE'){
@@ -98,12 +98,10 @@ function resetScore(){
 document.querySelector('.js-reset-button').addEventListener('click', ()=>{
   resetScore();
   removeGameFromLocalStorage(score);
-  console.log(score);
+  
 });
 
 function autoPlay(){
-  console.log(autoPlaying);
-  console.log(intervalId);
 
   if(!autoPlaying){
     intervalId = setInterval(()=>{
